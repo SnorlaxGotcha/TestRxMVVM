@@ -31,6 +31,11 @@
 		70488CF128293B200012627E /* ErrorResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70488CF028293B200012627E /* ErrorResponseDTO.swift */; };
 		70488CF4282959370012627E /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70488CF3282959370012627E /* FieldCell.swift */; };
 		70488CFA2829AAEA0012627E /* TransactionListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70488CF92829AAEA0012627E /* TransactionListVM.swift */; };
+		70488D282832353A0012627E /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70488D272832353A0012627E /* BasicCell.swift */; };
+		70488D2A2832356F0012627E /* AdditionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70488D292832356F0012627E /* AdditionalCell.swift */; };
+		70488D2C283235B00012627E /* InsertTransactionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70488D2B283235B00012627E /* InsertTransactionVM.swift */; };
+		70488D3028330C860012627E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 70488D2F28330C860012627E /* RxTest */; };
+		70488D3228330C8B0012627E /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 70488D3128330C8B0012627E /* RxBlocking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,9 @@
 		70488CF028293B200012627E /* ErrorResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseDTO.swift; sourceTree = "<group>"; };
 		70488CF3282959370012627E /* FieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
 		70488CF92829AAEA0012627E /* TransactionListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListVM.swift; sourceTree = "<group>"; };
+		70488D272832353A0012627E /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		70488D292832356F0012627E /* AdditionalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalCell.swift; sourceTree = "<group>"; };
+		70488D2B283235B00012627E /* InsertTransactionVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertTransactionVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +93,9 @@
 				0D6E57D32643AE8F00E3E72C /* Alamofire in Frameworks */,
 				0D6E57E32643AEDB00E3E72C /* RxCocoa in Frameworks */,
 				0D6E57E12643AEDB00E3E72C /* RxSwift in Frameworks */,
+				70488D3028330C860012627E /* RxTest in Frameworks */,
 				0D6E57D92643AEAB00E3E72C /* SnapKit in Frameworks */,
+				70488D3228330C8B0012627E /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +220,8 @@
 		0DE77A852644F6EC0068A3CE /* InsertTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				70488D2E283235E30012627E /* UI */,
+				70488D2D283235DB0012627E /* Presentation */,
 				0DE77A7D2644F6E70068A3CE /* InsertTransactionViewController.swift */,
 			);
 			path = InsertTransaction;
@@ -257,6 +269,23 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		70488D2D283235DB0012627E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				70488D2B283235B00012627E /* InsertTransactionVM.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		70488D2E283235E30012627E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				70488D272832353A0012627E /* BasicCell.swift */,
+				70488D292832356F0012627E /* AdditionalCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,6 +308,8 @@
 				0D6E57DE2643AEDB00E3E72C /* RxRelay */,
 				0D6E57E02643AEDB00E3E72C /* RxSwift */,
 				0D6E57E22643AEDB00E3E72C /* RxCocoa */,
+				70488D2F28330C860012627E /* RxTest */,
+				70488D3128330C8B0012627E /* RxBlocking */,
 			);
 			productName = Homework;
 			productReference = 0D86F2E72643A18700C0F731 /* Homework.app */;
@@ -404,13 +435,16 @@
 			files = (
 				0D86F3342643A80F00C0F731 /* APIManager.swift in Sources */,
 				70488CE22828FEF50012627E /* GetTrxDTO.swift in Sources */,
+				70488D2C283235B00012627E /* InsertTransactionVM.swift in Sources */,
 				0D86F2EF2643A18700C0F731 /* TransactionListViewController.swift in Sources */,
+				70488D2A2832356F0012627E /* AdditionalCell.swift in Sources */,
 				0D86F2EB2643A18700C0F731 /* AppDelegate.swift in Sources */,
 				70488CED28293A5B0012627E /* CreateModifyTrxDTO.swift in Sources */,
 				70488CF128293B200012627E /* ErrorResponseDTO.swift in Sources */,
 				70488CFA2829AAEA0012627E /* TransactionListVM.swift in Sources */,
 				70488CF4282959370012627E /* FieldCell.swift in Sources */,
 				70488CE728291DC60012627E /* MyHomeworkRepo.swift in Sources */,
+				70488D282832353A0012627E /* BasicCell.swift in Sources */,
 				70488CE9282924A20012627E /* ApiError.swift in Sources */,
 				0D86F2ED2643A18700C0F731 /* SceneDelegate.swift in Sources */,
 				70488CEB282926EC0012627E /* ApiRoute.swift in Sources */,
@@ -796,6 +830,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0D6E57DD2643AEDB00E3E72C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
+		};
+		70488D2F28330C860012627E /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D6E57DD2643AEDB00E3E72C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		70488D3128330C8B0012627E /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D6E57DD2643AEDB00E3E72C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

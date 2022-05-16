@@ -8,12 +8,12 @@
 import Foundation
 
 struct CreateModifyTrxDTO: Codable {
-    let time: Int
-    let title, description: String
-    let details: [CreateModifyTrxDetailDTO]?
+    var time: Int
+    var title, description: String
+    var details: [CreateModifyTrxDetailDTO]?
 }
 
 struct CreateModifyTrxDetailDTO: Codable {
-    let name: String
-    let quantity, price: Int
+    var name: String
+    var quantity, price: Int
 }

@@ -101,19 +101,13 @@ extension TransactionListViewController {
         }
         .disposed(by: disposeBag)
         
-        
         addButton.rx.tap.bind { [weak self] in
             guard let self = self else { return }
-            self.viewModel.isSelected.accept(!self.viewModel.isSelected.value)
+            let repo: MyHomeworkRepo = MyHomeworkDataRepo.init(remoteDataSource: MyHomeworkRemoteDatasource.init())
+            let vm = InsertTransactionVM(apiService: repo)
+            let vc = InsertTransactionViewController(viewModel: vm)
+            self.present(vc, animated: true)
         }.disposed(by: disposeBag)
-        
-        viewModel.isSelected
-            .asObservable()
-            .subscribe { [weak self] isSelected in
-                print("isSelected is \(isSelected)")
-                
-            }.disposed(by: disposeBag)
-
         
     }
 }
